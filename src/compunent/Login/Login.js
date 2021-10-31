@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
+import './Login.css';
 
 const Login = () => {
     const { singInWithGoogle, setError, setIsLoading } = useAuth()
@@ -28,8 +29,8 @@ const Login = () => {
    
      return (
          <div className='Login'>
-             <div className="login-container text-center ">
-                 <h5 className="text-red py-4">Login Your Account!</h5>
+             <div className="login-container ">
+                 <h5 className="text-red">Login Your Account!</h5>
                  <hr />
                  
                  <Button className="bg-warning text-black" onClick={handleGoogleSingin}>Sing in with Google</Button>
