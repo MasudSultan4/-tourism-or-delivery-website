@@ -41,7 +41,7 @@ const ManageBooking = () => {
             <Table striped bordered hover>
                 <thead>
                     <tr>
-                        <th>#</th>
+                      
                         <th>Email</th>
                         <th>Name</th>
                         <th>Tour Name</th>
@@ -53,7 +53,7 @@ const ManageBooking = () => {
                 {
                     bookings.map(booking => <tbody>
                         <tr>
-                            <td>{booking.index}</td>
+                        
                             <td>{booking.email}</td>
                             <td>{booking.userName}</td>
                             <td>{booking?.name}</td>
