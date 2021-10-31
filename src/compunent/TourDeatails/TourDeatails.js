@@ -1,11 +1,14 @@
+import axios from 'axios';
 import React, { useEffect, useRef, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
 
 const TourDeatails = () => {
     const { tourId } = useParams();
+    const history = useHistory();
+    
     const { user } = useAuth();
     const [tour, setTour] = useState({});
     const { register, handleSubmit, reset } = useForm();
@@ -33,13 +36,15 @@ const TourDeatails = () => {
 
         console.log("data here", dataRef)
         dataRef.status = "pending"
-        /* axios.post('https://ghoulish-skeleton-88250.herokuapp.com/travelsArea',data)
+        
+        axios.post('https://ghoulish-skeleton-88250.herokuapp.com/bookings',dataRef)
         .then(res => {
             if(res.data.insertedId){
-                alert('Added Your Tour Area')
+                alert('Added Your Booking tour')
+                history.push("/myBooking")
                 reset()
             }
-        }) */
+        })
     }
     return (
         <div>
@@ -77,8 +82,10 @@ const TourDeatails = () => {
                     <div className="col-12">
                         <input type="text" {...register("number")} className="form-control" placeholder="Mobile Number" required />
                     </div>
+                    
+                    
                     <div className="col-12">
-                        <input type="number" {...register("price")} className="form-control" value={tour.price} required ref={priceRef} />
+                        <input type="text" {...register("price")} className="form-control" value={tour?.price} required ref={priceRef} />
                     </div>
                     <div className="col-12">
                         <input type="date" {...register("date")} className="form-control" required />

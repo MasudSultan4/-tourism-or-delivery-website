@@ -10,6 +10,8 @@ import Footer from './compunent/Footer/Footer';
 import Header from './compunent/Header/Header';
 import Home from './compunent/Home/Home';
 import Login from './compunent/Login/Login';
+import ManageBooking from './compunent/ManageBooking/ManageBooking';
+import MyBooking from './compunent/MyBooking/MyBooking';
 import PrivateRoute from './compunent/PrivateRoute/PrivateRoute';
 import TourDeatails from './compunent/TourDeatails/TourDeatails';
 import AuthProvider from './Context/AuthProvider';
@@ -43,6 +45,12 @@ function App() {
         </Route>
         <PrivateRoute exact path="/details/:tourId">
           <TourDeatails></TourDeatails>
+        </PrivateRoute>
+        <PrivateRoute path="/manage">
+          <ManageBooking></ManageBooking>
+        </PrivateRoute>
+        <PrivateRoute path="/myBooking">
+          <MyBooking></MyBooking>
         </PrivateRoute>
         
         <Route path="/login">

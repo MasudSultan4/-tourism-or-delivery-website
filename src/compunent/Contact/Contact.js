@@ -4,7 +4,7 @@ import './Contact.css';
 
 const Contact = () => {
     return (
-        <div className='ContactForm'>
+        <div id="contact" className='ContactForm'>
             <div className='container'>
                 
                 <div className='row'>
@@ -62,7 +62,7 @@ const Contact = () => {
                                     </div>
                                 </div>
 
-                                <Button className="btn btn-md btn-secondary mt-3">Submit</Button>
+                                <Button className="btn btn-md btn-secondary mt-3">Send Message</Button>
                             </form>
                         </div>
 
