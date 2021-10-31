@@ -37,8 +37,8 @@ const ManageBooking = () => {
         })
     }
     return (
-        <Container className="mt-4">
-            <Table striped bordered hover>
+        <Container className="mt-4 col-12">
+            <Table responsive striped bordered hover>
                 <thead>
                     <tr>
                       

@@ -31,7 +31,7 @@ const MyBooking = () => {
     return (
         <div className="mt-4">
             <Container>
-            <Table striped bordered hover>
+            <Table responsive striped bordered hover>
                 <thead>
                     <tr>
                       
